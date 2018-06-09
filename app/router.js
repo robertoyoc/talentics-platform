@@ -7,6 +7,13 @@ const Router = EmberRouter.extend({
 });
 
 
-Router.map(function() {});
+Router.map(function() {
+  this.route('dueno', function() {
+    this.route('administradores', function() {
+      this.route('nuevo');
+      this.route('editar');
+    });
+  });
+});
 
 export default Router;

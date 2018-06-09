@@ -1,0 +1,18 @@
+{{link-to 'nuevo' 'dueno.administradores.nuevo' }}
+
+<table style="width:100%">
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido</th> 
+    <th>Acciones</th>
+    
+  </tr>
+  {{#each model as |cuenta|}}
+  <tr>
+    <td>{{cuenta.nombre}}</td>
+    <td>{{cuenta.apellido}}</td> 
+    <td><button>Editar</button><button {{action "delete" cuenta}}>Borrar</button></td>
+  
+  </tr>
+  {{/each}}
+</table>

@@ -1,14 +1,12 @@
 import Route from '@ember/routing/route';
 
 export default Route.extend({
-	beforeModel()
-	{
+	beforeModel(){
 
-		this.store.createRecord('account',
-		{
-			nombre: 'Don',
-			apellido: 'Gama',
-			uIdPerfil 'El Diablo'
-		})
+		//this.store.createRecord('account', {
+		//	nombre: 'Don',
+		//	apellido: 'Gama',
+		//	uIdPerfil: 'El Diablo'
+		//}).save()
 	}
 });
