@@ -8,6 +8,4 @@ export default DS.Model.extend({
 	queja: DS.belongsTo('complaint'),
 	notificacion: DS.hasMany('notification'),
 	reporte: DS.belongsTo('report'),
-	queja: DS.belongsTo('complaint'),
-	notificacion: DS.hasMany('notification')
 });
