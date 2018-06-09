@@ -1,0 +1,29 @@
+<style>
+#b{
+  background: black;
+  color: white;
+}
+</style>
+{{#link-to  'dueno.administradores.nuevo'}}
+<button id="b">NUEVO</button>
+{{/link-to}}
+<table style="width:100%">
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido</th> 
+
+  </tr>
+{{#each model as |alias|}}
+  <tr>
+    <td>{{alias.nombre}}</td>
+    <td>{{alias.apellido}}</td> 
+    <td>
+      {{#link-to 'dueno.administradores.editar' alias.id}}
+      <button>Editar</button>
+     {{/link-to}} 
+    </td>
+    <td><button {{action "delete" alias}}>Borrar</button></td>
+  </tr>
+  <br>
+{{/each}}
+</table>

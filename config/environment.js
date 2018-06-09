@@ -6,6 +6,14 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+    firebase: {
+    apiKey: "AIzaSyBgduIQDHqUtxVKlSn5eN9Z4LGp1C7JCRs",
+    authDomain: "talentics-platform.firebaseapp.com",
+    databaseURL: "https://talentics-platform.firebaseio.com",
+    projectId: "talentics-platform",
+    storageBucket: "talentics-platform.appspot.com",
+    messagingSenderId: "376267214776"
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -29,6 +37,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    
   }
 
   if (environment === 'test') {
