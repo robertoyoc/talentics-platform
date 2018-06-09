@@ -5,7 +5,7 @@ export default DS.Model.extend({
 	fecha: DS.attr('number'),
 	asesoria: DS.hasMany('advisory'),
 	duda: DS.hasMany('doubt'),
-	solicitudDeAsesoria: DS.belogsTo('tutoring-request'),
+	solicitudDeAsesoria: DS.belongsTo('tutoring-request'),
 	nino: DS.belongsTo('kid'),
 	profe: DS.belongsTo('teacher'),
 });

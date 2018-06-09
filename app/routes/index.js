@@ -6,8 +6,8 @@ export default Route.extend({
 
 		this.store.createRecord('account',
 		{
-			nombre: 'Don'
-			apellido: 'Gama'
+			nombre: 'Don',
+			apellido: 'Gama',
 			uIdPerfil 'El Diablo'
 		})
 	}
