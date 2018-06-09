@@ -7,6 +7,13 @@ const Router = EmberRouter.extend({
 });
 
 
-Router.map(function() {});
+Router.map(function() {
+  this.route('dueno', function() {
+    this.route('admistradores', function() {
+      this.route('nuevo');
+      this.route('editar', {path: '/editar/:account_id'});
+    });
+  });
+});
 
 export default Router;
