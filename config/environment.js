@@ -29,8 +29,16 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV['firebase'] = {
+      apiKey: "AIzaSyBgduIQDHqUtxVKlSn5eN9Z4LGp1C7JCRs",
+      authDomain: "talentics-platform.firebaseapp.com",
+      databaseURL: "https://talentics-platform.firebaseio.com",
+      projectId: "talentics-platform",
+      storageBucket: "talentics-platform.appspot.com",
+      messagingSenderId: "376267214776"
+    }
   }
-
+  
   if (environment === 'test') {
     // Testem prefers this...
     ENV.locationType = 'none';
