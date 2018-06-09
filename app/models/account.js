@@ -4,7 +4,7 @@ export default DS.Model.extend({
 	nombre: DS.attr('string'),
 	apellido: DS.attr('string'),
 	uIdPerfil: DS.attr('number'),
-	reporte: DS.belogsTo('reoport'),
-	queja: DS.belogsTo('complaint'),
-	notificacion: DS.HasMany('notification'),
+	reporte: DS.belongsTo('reoport'),
+	queja: DS.belongsTo('complaint'),
+	notificacion: DS.hasMany('notification'),
 });
