@@ -6,8 +6,7 @@ const Router = EmberRouter.extend({
   rootURL: config.rootURL
 });
 
-Router.map(function() {
-  this.route('ctr-test');
-});
+
+Router.map(function() {});
 
 export default Router;
