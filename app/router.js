@@ -14,6 +14,13 @@ Router.map(function() {
       this.route('editar', {path: '/editar/:account_id'});
     });
   });
+
+  this.route('padre', function() {
+    this.route('hijos', function() {
+      this.route('nuevo');
+      this.route('editar', {path: 'editar/:kid_id'});
+    });
+  });
 });
 
 export default Router;
