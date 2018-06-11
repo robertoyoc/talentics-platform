@@ -21,6 +21,17 @@ Router.map(function() {
       this.route('editar', {path: 'editar/:kid_id'});
     });
   });
+
+  this.route('editor', function() {
+    this.route('cursos', function() {
+      this.route('nuevo');
+      this.route('editar');
+      this.route('clases', function() {
+        this.route('nuevo');
+        this.route('editar');
+      });
+    });
+  });
 });
 
 export default Router;
