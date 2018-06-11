@@ -1,0 +1,19 @@
+{{link-to 'nuevo' 'padre.hijo.nuevo' }}
+
+
+<table style="width:100%">
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Fecha de Nacimiento</th>
+    <th>Acciones</th>
+  </tr>
+  {{#each model as |kid|}}
+  <tr>
+    <td>{{kid.nombre}}</td>
+    <td>{{kid.apellido}}</td>
+    <td>{{kid.fecha}}</td>
+    <td>{{link-to 'Editar' 'padre.hijo.editar' kid.id}}<button {{action "delete" kid}} >Borrar</button></td> 
+ </tr>
+  {{/each}}
+</table>
