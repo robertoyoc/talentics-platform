@@ -6,4 +6,5 @@ export default Controller.extend({
 			nino.destroyRecord()
 		}
 	}
+
 });

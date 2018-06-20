@@ -6,4 +6,5 @@ export default Route.extend({
 	  	this.transitionToRoute('padre.hijo.index')
 	  }
 	}
+
 });
