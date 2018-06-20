@@ -13,6 +13,20 @@ Router.map(function() {
       this.route('nuevo');
       this.route('editar', {path: '/editar/:account_id'});
     });
+    this.route('admins', function() {
+      this.route('nuevo');
+      this.route('editar');
+    });
+    this.route('reportes', function() {
+      this.route('usuarios');
+      this.route('gastos');
+      this.route('ingresos');
+      this.route('satisfaccion');
+    });
+    this.route('kits', function() {
+      this.route('agregar');
+      this.route('enviar');
+    });
   });
 
   this.route('padre', function() {
