@@ -1,1 +1,17 @@
-{{outlet}}
+{{link-to 'nuevo' 'editor.cursos.nuevo' }}
+
+
+<table style="width:100%">
+  <tr>
+    <th>Nombre</th>
+    <th>Acciones</th>
+  </tr>
+  {{#each model as |curso|}}
+  <tr>
+    <td>{{curso.nombre}}</td>
+    <td>{{link-to 'Editar' 'padre.hijos.editar' curso.id}}<button {{action "delete" curso}} >Borrar</button></td> 
+ </tr>
+  {{else}}
+    <h5>No existen cursos aun</h5>
+  {{/each}}
+</table>
