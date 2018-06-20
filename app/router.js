@@ -39,7 +39,7 @@ Router.map(function() {
   this.route('editor', function() {
     this.route('cursos', function() {
       this.route('nuevo');
-      this.route('editar');
+      this.route('editar', {path: '/editar/:course_id'});
       this.route('clases', function() {
         this.route('nuevo');
         this.route('editar');
