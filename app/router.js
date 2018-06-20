@@ -72,6 +72,24 @@ Router.map(function() {
       this.route('solicitar');
     });
   });
+  this.route('admin', function() {
+    this.route('cursos', function() {
+      this.route('detalle');
+      this.route('clases', function() {
+        this.route('detalle');
+      });
+    });
+    this.route('becas', function() {
+      this.route('detalle');
+      this.route('aprobar');
+    });
+    this.route('usuarios', function() {
+      this.route('detalle');
+      this.route('suspender');
+      this.route('expediente');
+      this.route('balance');
+    });
+  });
 });
 
 export default Router;
