@@ -45,6 +45,10 @@ Router.map(function() {
         this.route('editar');
       });
     });
+    this.route('becas', function() {
+      this.route('nuevo');
+      this.route('editar', {path: '/editar/:scholarship_id'});
+    });
   });
   this.route('alumno', function() {
     this.route('dudas', function() {
