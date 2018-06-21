@@ -40,7 +40,7 @@ Router.map(function() {
     this.route('cursos', function() {
       this.route('nuevo');
       this.route('editar', {path: '/editar/:course_id'});
-      this.route('clases', function() {
+      this.route('clases', {path: '/clases/:course_id'}, function() {
         this.route('nuevo');
         this.route('editar');
       });

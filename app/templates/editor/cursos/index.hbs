@@ -13,7 +13,7 @@ td{
   </tr>
   {{#each model as |curso|}}
   <br><tr>
-    <td>{{curso.nombre}}</td>
+    <td> {{#link-to 'editor.cursos.clases' curso.id}} {{curso.nombre}} {{/link-to}} </td>
     <td>{{#link-to 'editor.cursos.editar' curso.id}}<button>Editar</button>{{/link-to}}<button {{action "delete" curso}}>Borrar</button></td> 
   </tr>
   {{else}}
