@@ -11,7 +11,7 @@ Router.map(function() {
   this.route('dueno', function() {
     this.route('administradores', function() {
       this.route('nuevo');
-      this.route('editar', {path: '/editar/:account_id'});
+      this.route('editar', { path: '/editar/:account_id' });
     });
     this.route('admins', function() {
       this.route('nuevo');
@@ -32,22 +32,22 @@ Router.map(function() {
   this.route('padre', function() {
     this.route('hijos', function() {
       this.route('nuevo');
-      this.route('editar', {path: 'editar/:kid_id'});
+      this.route('editar', { path: 'editar/:kid_id' });
     });
   });
 
   this.route('editor', function() {
     this.route('cursos', function() {
       this.route('nuevo');
-      this.route('editar', {path: '/editar/:course_id'});
-      this.route('clases', {path: '/clases/:course_id'}, function() {
-        this.route('nuevo');
-        this.route('editar');
+      this.route('editar', { path: '/editar/:course_id' });
+      this.route('clases', { path: '/clases/:course_id' }, function() {
+        this.route('nuevo', { path: '/nuevo/:course_id' });
+        this.route('editar', { path: '/editar/class_id' });
       });
     });
     this.route('becas', function() {
       this.route('nuevo');
-      this.route('editar', {path: '/editar/:scholarship_id'});
+      this.route('editar', { path: '/editar/:scholarship_id' });
     });
   });
   this.route('alumno', function() {
@@ -97,7 +97,7 @@ Router.map(function() {
   this.route('padre', function() {
     this.route('hijo', function() {
       this.route('nuevo');
-      this.route('editar', {path: '/editar/:account_id'});
+      this.route('editar', { path: '/editar/:account_id' });
     });
   });
   this.route('profesor', function() {
@@ -141,7 +141,7 @@ Router.map(function() {
   this.route('padre', function() {
     this.route('hijo', function() {
       this.route('nuevo');
-      this.route('editar', {path: '/editar/:kid_id'});
+      this.route('editar', { path: '/editar/:kid_id' });
     });
     this.route('balance', function() {
       this.route('detalle');
