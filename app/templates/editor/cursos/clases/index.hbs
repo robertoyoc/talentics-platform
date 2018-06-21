@@ -1,4 +1,7 @@
+{{#link-to  'editor.cursos.index'}}<button>Regresar a cursos</button>{{/link-to}}
+<br>
 {{model.nombre}}
+<br>
 {{#link-to 'editor.cursos.clases.nuevo' model.id}}
 	<button>Nueva clase</button>
 {{/link-to}}
@@ -11,9 +14,7 @@
 		<tr>
 			<td>{{clase.name}}</td>
 			<td>
-				{{#link-to 'editor.cursos.clases.editar' clase.id}}
-					<button>Editar</button>
-				{{/link-to}}
+				{{#link-to 'editor.cursos.clases.editar' clase}}<button>Editar</button>{{/link-to}}
 				<button {{action "borrar" clase}}>Borrar</button>
 			</td>
 		</tr>

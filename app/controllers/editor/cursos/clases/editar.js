@@ -4,7 +4,7 @@ export default Controller.extend({
 	actions: {
 		save(clase) {
 			clase.save().then(() => {
-				this.transitionToRoute('editor.cursos.clases', clase.course.id)
+				this.transitionToRoute('editor.cursos.clases', clase.course)
 			})
 		}
 	}
