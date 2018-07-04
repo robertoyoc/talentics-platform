@@ -29,13 +29,6 @@ Router.map(function() {
     });
   });
 
-  this.route('padre', function() {
-    this.route('hijos', function() {
-      this.route('nuevo');
-      this.route('editar', { path: 'editar/:kid_id' });
-    });
-  });
-
   this.route('editor', function() {
     this.route('cursos', function() {
       this.route('nuevo');
@@ -94,12 +87,6 @@ Router.map(function() {
       this.route('balance');
     });
   });
-  this.route('padre', function() {
-    this.route('hijo', function() {
-      this.route('nuevo');
-      this.route('editar', { path: '/editar/:account_id' });
-    });
-  });
   this.route('profesor', function() {
     this.route('perfil', function() {
       this.route('editar');
@@ -139,9 +126,9 @@ Router.map(function() {
     });
   });
   this.route('padre', function() {
-    this.route('hijo', function() {
+    this.route('hijos', function() {
       this.route('nuevo');
-      this.route('editar', { path: '/editar/:kid_id' });
+      this.route('editar', { path: 'editar/:kid_id' });
     });
     this.route('balance', function() {
       this.route('detalle');
