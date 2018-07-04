@@ -1,5 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-	curso: DS.belongsTo('course')
+	name: DS.attr('string'),
+	content: DS.attr('string'),
+	course: DS.belongsTo('course')
 });

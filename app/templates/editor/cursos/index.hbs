@@ -1,1 +1,23 @@
-{{outlet}}
+{{#link-to 'editor.cursos.nuevo' }}<button>Nuevo</button>{{/link-to}}
+<style>
+td{
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+</style>
+
+<table style="width:100%">
+  <tr>
+    <th>Nombre</th>
+    <th>Acciones</th>
+  </tr>
+  {{#each model as |curso|}}
+  <br><tr>
+    <td> {{#link-to 'editor.cursos.clases' curso.id}} {{curso.nombre}} {{/link-to}} </td>
+    <td>{{#link-to 'editor.cursos.editar' curso.id}}<button>Editar</button>{{/link-to}}<button {{action "delete" curso}}>Borrar</button></td> 
+  </tr>
+  {{else}}
+  <h5>Aun no existen cursos</h5>
+  {{/each}}
+</table>
+

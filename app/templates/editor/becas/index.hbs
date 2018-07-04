@@ -1,0 +1,19 @@
+<h1>Beca</h1>
+<button {{action 'nuevaBeca'}}>Nueva beca</button>
+<br>
+<table>
+<tr>
+<th>Niño</th>
+<th>Tipo</th>
+<th>Porcentaje</th>
+<th>Acciones</th>
+</tr>
+{{#each model as |beca|}}
+<tr>
+<td>{{beca.kid.name}}</td>
+<td>{{beca.type}}</td>
+<td>{{beca.percentage}}</td>
+<td>{{link-to 'editar' 'editor.becas.editar' beca.id}}<button{{action 'borrar' beca}}>borrar</button></td>
+</tr>
+{{/each}}
+</table>

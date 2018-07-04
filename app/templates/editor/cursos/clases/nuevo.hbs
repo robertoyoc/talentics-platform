@@ -1,1 +1,4 @@
-{{outlet}}
+Nombre: {{input value=name}}
+<br> contenido: {{textarea value=contenido cols="80" rows="15"}}
+<br>
+<button {{action "save" name contenido model}}>Guardar</button>
