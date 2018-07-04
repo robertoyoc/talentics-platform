@@ -129,16 +129,13 @@ Router.map(function() {
     this.route('hijos', function() {
       this.route('nuevo');
       this.route('editar', { path: 'editar/:kid_id' });
+      this.route('detalle');
     });
     this.route('balance', function() {
       this.route('detalle');
       this.route('pagar');
       this.route('cancelar');
       this.route('suscripcion');
-    });
-
-    this.route('hijos', function() {
-      this.route('detalle');
     });
     this.route('asesorias', function() {
       this.route('nuevo');
