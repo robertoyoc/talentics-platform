@@ -35,8 +35,23 @@
   .admin{
     @import "admin";
   }
-  
 
   .editor{
     @import "editor";
   }
+
+  .padre{
+    @import "padre";
+  }
+
+  .alumno{
+    @import "alumno";
+  }
+
+  .profesor{
+    @import "profesor";
+  }
+  .dueno{
+    @import "dueno";
+  }
+
