@@ -6,14 +6,12 @@ module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
   });
-<<<<<<< HEAD
-=======
+
   app.import('node_modules/materialize-css/dist/css/materialize.css')
   app.import('node_modules/materialize-css/dist/js/materialize.js')
 
 
 
->>>>>>> 8d6844f574dfb34375b2f95d4736633c87061811
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
