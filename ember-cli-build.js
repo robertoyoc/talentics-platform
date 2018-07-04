@@ -7,8 +7,13 @@ module.exports = function(defaults) {
     // Add options here
   });
 
+
   app.import('node_modules/materialize-css/dist/css/materialize.css')
   app.import('node_modules/materialize-css/dist/js/materialize.js')
+
+  // app.import('node_modules/materialize-css/dist/css/materialize.css')
+  // app.import('node_modules/materialize-css/dist/js/materialize.js')
+
 
 
 
