@@ -1,7 +1,9 @@
 div .nav-bar-index{
-	background: linear-gradient(262.92deg, rgba(39, 174, 96, 0.7) 0%, rgba(255, 255, 255, 0) 100%), #F1FF54;
+	background: linear-gradient(262.84deg, rgba(47, 128, 237, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #333333;
 	height: 40px;
 	box-shadow: none;
+	position: absolute;
+	top: 0;
 }
 div .global-header{
 	background: #C4C4C4;
@@ -29,7 +31,7 @@ div .header-text > p {
 	height: unset;
 }
 .title-container{
-	background: linear-gradient(262.92deg, rgba(39, 174, 96, 0.7) 0%, rgba(255, 255, 255, 0) 100%), #F1FF54;
+	background: linear-gradient(262.84deg, rgba(47, 128, 237, 0.3) 0%, rgba(255, 255, 255, 0) 100%), #333333;
 	position: absolute;
 	top: 40px;
 	height: 100px;
@@ -39,6 +41,27 @@ div .header-text > p {
 	font-size: 40px;
 	letter-spacing: 10px;
 	margin-top: 20px;
+}
+
+.profile{
+	height: 170px;
+	width: 170px;
+	margin-top: 5px;
+}
+
+.main-container{
+	position: absolute;
+	top: 250px;
+}
+
+.inicio{
+	margin-top: 300px;
+}
+
+.index{
+	width: 200px;
+	margin-bottom: 50px;
+	background-color: #274eb2; 
 }
 
 @media only screen and (max-width: $medium-screen){

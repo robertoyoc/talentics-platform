@@ -13,10 +13,6 @@ Router.map(function() {
       this.route('nuevo');
       this.route('editar', { path: '/editar/:account_id' });
     });
-    this.route('admins', function() {
-      this.route('nuevo');
-      this.route('editar');
-    });
     this.route('reportes', function() {
       this.route('usuarios');
       this.route('gastos');
