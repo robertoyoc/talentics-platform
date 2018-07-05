@@ -1,6 +1,8 @@
 div .nav-bar-index{
 	background: linear-gradient(262.84deg, rgba(28, 193, 98, 0.7) 0%, rgba(255, 255, 255, 0) 100%), #79B0D7 !important;
 	height: 40px;
+	position: absolute;
+	top: 0;
 }
 div .global-header{
 	background: #C4C4C4;
@@ -60,3 +62,14 @@ div .header-text > p {
 		letter-spacing: 10px;
 	}
 }
+
+.main-cointainer{
+	position: absolute;
+	top: 250px;
+}
+
+
+.inicio{
+	margin-top: 300px;
+	text-align: center;
+	}
