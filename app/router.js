@@ -153,6 +153,9 @@ Router.map(function() {
       this.route('detalle');
     });
   });
+  this.route('login');
+  this.route('signin');
+  this.route('dir');
 });
 
 export default Router;
