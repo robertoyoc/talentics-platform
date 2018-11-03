@@ -5,6 +5,7 @@ export default DS.Model.extend({
 	tutoringRequests: DS.hasMany('tutoring-request'),
 	kids: DS.hasMany('kid'),
 	name: DS.attr('string'),
-	apellido: DS.attr('string'),
-	birthday: DS.attr('number')
+	lastName: DS.attr('string'),
+	birthday: DS.attr('number'),
+	email: DS.attr('string')
 });

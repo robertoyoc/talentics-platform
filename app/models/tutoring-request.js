@@ -6,4 +6,6 @@ export default DS.Model.extend({
 	class: DS.belongsTo('class'),
 	requestDate: DS.attr('number'),
 	approval: DS.attr('boolean'),
+	tema: DS.attr('string'),
+	comentarios: DS.attr('string')
 });
