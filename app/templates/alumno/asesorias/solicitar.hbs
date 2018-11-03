@@ -1,1 +1,11 @@
-{{outlet}}
+<div class="row">
+    <div class="col s8 h2">
+        Solicitar una asesoría
+    </div>
+    <div class="col s4 right-align" style="padding-right:30px;">
+        {{link-to 'cancelar' 'alumno.asesorias' class="waves-effect waves-light btn red darken-2 rounded-btn" }}
+    </div>
+
+
+</div>
+{{forms/c-asesoria model=model}}
