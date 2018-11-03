@@ -12,6 +12,7 @@ export default Controller.extend({
   
   actions: {
     cancelar() {
+      this.get('model').destroyRecord()
       this.transitionToRoute('dueno.administradores.index')
     },
     registrar() {

@@ -6,7 +6,7 @@ export default Route.extend({
 	beforeModel(transition) {
 		return this.get('currentUser.account').then((account) => {
 			let perfil = 'login';
-			transition.abort()
+			transition.abort();
 
 			if (account) {
 				switch(account.get('perfil')){

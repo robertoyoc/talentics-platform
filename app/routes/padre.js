@@ -1,8 +1,28 @@
 import Route from '@ember/routing/route';
+import {inject as service} from '@ember/service'
 
 export default Route.extend({
+  currentUser: service(),
+  beforeModel(transition) {
+    this.set('transition', transition)
 
-	model(){
-		return this.store.findAll('kid')
-	}
+    return this.get('session').fetch().catch(() => {
+      if (!this.get('session.currentUser.uid')) {
+        transition.abort();
+        this.transitionTo('dir')
+      }
+    }).then(this.lookForTransition.bind(this)).catch(this.lookForTransition.bind(this));
+  },
+  model() {
+    return this.store.findAll('kid');
+  },
+  lookForTransition() {
+    return this.get('currentUser.account').then((account) => {
+      this.set('account', account);
+      if (account.get('perfil') != 'father') {
+        this.get('transition').abort();
+        return this.transitionTo('dir');
+      }
+    })
+  }
 });
