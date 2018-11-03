@@ -1,0 +1,42 @@
+<div class="alumno">
+  <div class="navbar-fixed">
+    <nav class="nav-bar-index" style="top:0">
+
+    </nav>
+  </div>
+   <div class="navbar-fixed">
+    <nav class="global-header">
+
+    </nav>
+  </div>
+    <div class="navbar-fixed">
+    <nav class="header-text">
+      <p> TALENTICS </p>
+    </nav>
+  </div>
+
+<nav class="title-container">
+    <div class="nav-wrapper"  >
+      <div class="row" style="height:20px">
+        <div class="col s5 offset-s1 m2 offset-m1">
+          <img src="https://i.ytimg.com/vi/Vq8mUnxEBII/maxresdefault.jpg" alt="" class="circle responsive-img profile">
+        </div>
+        <div id="title" class="col s6 title"></div>
+      </div>
+    </div>
+  </nav>
+</div>
+<div class="main-content alumno">
+    <div class="row">
+    <div class="col s3 center-align" style="margin-top:10%;">
+      {{#link-to 'alumno' }}
+        <img src="/alumno/menu.svg">
+
+      {{/link-to}}
+      
+    </div>
+    <div class="col s9">
+        {{outlet}}
+    </div>
+  </div>
+</div>
