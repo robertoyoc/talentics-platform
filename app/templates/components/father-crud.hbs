@@ -1,0 +1,9 @@
+<form {{action 'guardar' on="submit"}} >
+	<p>Nombre: {{input type="text" value=model.name required=true}}</p>
+	<p>Apellidos: {{input type="text" value=model.lastName required=true}}</p>
+	<p>Fecha de Nacimiento: {{input type="number" value=model.birthdate required=true}}</p>
+	<p>Correo: {{input type="email" value=model.email required=true}}</p>
+	<p>Contraseña: {{input type="password" value=model.pswd required=true}}</p>
+	<button type="button" {{action 'cancelar'}} >Cancelar</button>
+	<button>{{buttonText}}</button>
+</form>
