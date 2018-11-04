@@ -1,19 +1,62 @@
-<h1>Beca</h1>
-<button {{action 'nuevaBeca'}}>Nueva beca</button>
-<br>
-<table>
-<tr>
-<th>Niño</th>
-<th>Tipo</th>
-<th>Porcentaje</th>
-<th>Acciones</th>
-</tr>
-{{#each model as |beca|}}
-<tr>
-<td>{{beca.kid.name}}</td>
-<td>{{beca.type}}</td>
-<td>{{beca.percentage}}</td>
-<td>{{link-to 'editar' 'editor.becas.editar' beca.id}}<button{{action 'borrar' beca}}>borrar</button></td>
-</tr>
-{{/each}}
-</table>
+<div >
+    <h1>Beca</h1>
+    <button {{action 'nuevaBeca'}}>Nueva beca</button>
+    <br>
+    <table>
+    <tr>
+    <th>Niño</th>
+    <th>Tipo</th>
+    <th>Porcentaje</th>
+    <th>Acciones</th>
+    </tr>
+    {{#each model as |beca|}}
+    <tr>
+    <td>{{beca.kid.name}}</td>
+    <td>{{beca.type}}</td>
+    <td>{{beca.percentage}}</td>
+    <td>{{link-to 'editar' 'editor.becas.editar' beca.id}}<button{{action 'borrar' beca}}>borrar</button></td>
+    </tr>
+    {{/each}}
+    </table>
+
+    <div class="row"> 
+            <div class="col s12 m4 l3" align="right"> 
+                <div style="margin: 20px 70px;">
+                    <img src="{{rootURL}}/Editor/Rectangle 2.22.png"> <br>
+                    <img src="{{rootURL}}/Editor/Rectangle 2.23.png"> <br>
+                    <img src="{{rootURL}}/Editor/Rectangle 2.24.png"> <br>
+                </div>
+            </div>
+            <div class="col s12 m8 l9 "> 
+                <div class="row">
+                    <div class="btn btnBecas">
+                        <img src="{{rootURL}}/Editor/+.png" width="30%" style="padding: 5px" > <br>
+                        Nuevo
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <hr>
+                </div>
+
+                <div class="row">
+                    <div class="col s4 l4">
+                        <div class="btn btnBecas">
+                            Beca 1
+                        </div>
+                    </div>
+                    <div class="col s4">
+                        <div class="btn btnBecas">
+                            Beca 2
+                        </div>
+                    </div>
+                    <div class="col s4">
+                        <div class="btn btnBecas">
+                            Beca 3
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+</div>

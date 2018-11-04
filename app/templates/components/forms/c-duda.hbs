@@ -1,0 +1,55 @@
+<style>
+    .h70{
+        height: 120px;
+    }
+</style>
+<div class="row ">
+
+    <form class="row">
+        <div class="col s8">
+            <div class="row">
+                <div class="col s4">
+                    <label>Materia</label>
+                </div>
+                 <div class="col s8">
+                      {{input type="text" value=model.materia class="input-tlc"}}
+                 </div>
+            </div>
+        </div>
+        
+        <div class="col s8">
+            <div class="row">
+                <div class="col s4">
+                    <label>Pregunta</label>
+                </div>
+                 <div class="col s8">
+                      {{input type="text" value=model.texto class="input-tlc"}}
+                 </div>
+            </div>
+        </div>
+        <div class="col s8">
+            <div class="row">
+                <div class="col s4">
+                    <label>Descripción</label>
+                </div>
+                
+            </div>
+            <div class="col s12 p-0">
+                {{textarea value=model.descripcion class="input-tlc h70" rows=10}}
+            </div>
+        </div>
+        <div class="col s8 center-align" style="margin-top:30px">
+            {{#unless model.isNew}}
+                <button class="waves-effect waves-light btn  red darken-2 rounded-btn ">Borrar</button>
+
+
+            {{/unless}}
+            <button class="waves-effect waves-light btn  blue lighten-1 rounded-btn ">{{if model.isNew 'Publicar' 'Guardar'}}</button>
+            
+        </div>
+        
+        
+    </form>
+    
+
+</div>

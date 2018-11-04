@@ -1,1 +1,100 @@
-{{outlet}}
+<div class="row font-tlc">
+    <div class="row">
+        {{#link-to 'alumno.asesorias.solicitar' class="col s12"}}
+        <img src="/alumno/asesoria.svg" width="222px">
+        {{/link-to}}
+        <div class="col s4">
+            <p>solicita {{link-to 'aquí' 'alumno.asesorias.solicitar' class="link-tlc"}} una asesoría </p>
+            <p>con el profesor de tu elección</p>
+        </div>
+        <div class="col s4">
+            <p>o {{link-to 'crea una duda' 'alumno.dudas.nueva' class="link-tlc"}} para que</p>
+            <p>cualquier profesor la conteste</p>
+        </div>
+
+    </div>
+    <div class="sabias col s12" style="margin-top:30px">
+        Mis asesorías
+    </div>
+    <div class="row">
+        <div class="col s4">
+            <div class="card card-red">
+                <div class="card-content ">
+                    <span class="card-title">Card Title</span>
+                    <p>I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col s4">
+            <div class="card card-yellow">
+                <div class="card-content ">
+                    <span class="card-title">Card Title</span>
+                    <p>I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col s4">
+            <div class="card card-blue">
+                <div class="card-content ">
+                    <span class="card-title">Card Title</span>
+                    <p>I am a very simple card. I am good at containing small bits of information.
+                        I am convenient because I require little markup to use effectively.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sabias col s12" style="margin-top:30px">
+        Historial
+    </div>
+    <ul class="collection">
+        <li class="collection-item">
+            <div class="row valign-wrapper">
+                <div class="col s2 center-align">
+                     <img src="https://www.weact.org/wp-content/uploads/2016/10/Blank-profile.png" alt="" class="circle" width="50px">
+                </div>
+                <div class="col s5">
+                     <span>Title</span>
+                </div>
+                <div class="col s3">
+                    date
+
+                </div>
+                <div class="col s2"> 
+                     {{#link-to 'alumno.asesorias.solicitar' class="link-tlc"}}
+                    nueva asesoría
+                    {{/link-to}}
+                </div>
+            </div>
+           
+           
+           
+          
+        </li>
+        <li class="collection-item">
+            <div class="row valign-wrapper">
+                <div class="col s2 center-align">
+                     <img src="https://www.weact.org/wp-content/uploads/2016/10/Blank-profile.png" alt="" class="circle" width="50px">
+                </div>
+                <div class="col s5">
+                     <span>Title</span>
+                </div>
+                <div class="col s3">
+                    date
+
+                </div>
+                <div class="col s2"> 
+                     {{#link-to 'alumno.asesorias.solicitar' class="link-tlc"}}
+                    nueva asesoría
+                    {{/link-to}}
+                </div>
+            </div>
+           
+           
+           
+          
+        </li>
+        
+    </ul>
+</div>

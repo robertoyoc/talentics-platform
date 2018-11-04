@@ -37,8 +37,9 @@ div .header-text > p {
 	height: 100px;
 }
 .profile{
-	height: 200px;
-	width: 200px;
+	margin-top: 20px;
+	height: 120px;
+	width: 120px;
 }
 .title{
 	font-size: 40px;
@@ -58,4 +59,90 @@ div .header-text > p {
 }
 
 }
+
+.divider-tlc{
+	border: 1px solid #E0E0E0;
+	margin-bottom: 10px;
+}
+.sabias{
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: normal;
+	line-height: normal;
+	font-size: 32px;
+	color: #616161;
+}
+.border-bb{
+	border-bottom: 10px solid #2F80ED;
+}
+
+.card-yellow{
+	border-bottom: 10px solid #F2C94C;
+}
+.card-blue{
+	border-bottom: 10px solid #2F80ED;
+}
+.card-red{
+	border-bottom: 10px solid #EB5757;
+}
 	
+.font-tlc{
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: normal;
+	line-height: normal;
+	color: #616161;
+
+}
+.link-tlc{
+	text-decoration-line: underline;
+	color: #EB5757;
+}
+#title{
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: normal;
+	line-height: normal;
+	font-size: 65px;
+}
+.rounded-btn{
+	border-radius: 12px;
+}
+.input-tlc{
+	background: #FFFFFF;
+border: 0.25px solid #BDBDBD!important;
+box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2)!important;
+padding: 0px 5px !important;
+}
+label{
+	font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 22px;
+color: #616161;
+}
+p-0{
+	padding-left: 0px !important;
+}
+
+.h2{
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: normal;
+	line-height: normal;
+	font-size: 32px;
+	color: #616161;
+}
+.card-tlc{
+	border-bottom: 1px solid #E0E0E0;
+}
+
+
+.course-card{
+	border: 0.25px solid #BDBDBD;
+box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+height: 164px;
+margin: 0px 4%;
+}

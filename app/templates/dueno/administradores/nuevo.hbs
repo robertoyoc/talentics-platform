@@ -1,3 +1,6 @@
 {{link-to 'tabla' 'dueno.administradores.index' }}
 
-{{account-unit model=model guardado=(action 'onGuardado')}}
+{{admin-crud admin=model
+				buttontext="Registrar"
+				onCancelar=(action 'cancelar')
+				onGuardar=(action 'registrar')}}
