@@ -42,7 +42,7 @@ Router.map(function() {
   this.route('alumno', function() {
     this.route('dudas', function() {
       this.route('nueva');
-      this.route('editar');
+      this.route('editar', {path: '/editar/:duda_id'});
     });
     this.route('tests', function() {
       this.route('aplicar');

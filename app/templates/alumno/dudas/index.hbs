@@ -16,35 +16,21 @@
 <div class="sabias col s12" style="margin-top:30px">
     Historial
 </div>
+
 <div class="row">
+  {{#each model.doubts as |doubt index|}}
     <div class="col s4">
-      <div class="card card-red">
+      {{#link-to 'alumno.dudas.editar' doubt}}
+      <div class="card card-{{if (eq (mod index 3) 0) "red" (if (eq (mod index 3) 1) "yellow" "blue") }}">
+       
         <div class="card-content ">
-          <span class="card-title">Card Title</span>
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+          <span class="card-title">{{doubt.text}}</span>
+          <p>{{doubt.description}}</p>
         </div>
       </div>
+      {{/link-to}}
     </div>
-     <div class="col s4">
-      <div class="card card-yellow">
-        <div class="card-content ">
-          <span class="card-title">Card Title</span>
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-      </div>
-    </div>
-     <div class="col s4">
-      <div class="card card-blue">
-        <div class="card-content ">
-          <span class="card-title">Card Title</span>
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-      </div>
-    </div>
-
-
+     
+{{/each}}
 
 </div>

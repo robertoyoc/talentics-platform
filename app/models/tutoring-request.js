@@ -6,6 +6,7 @@ export default DS.Model.extend({
 	class: DS.belongsTo('class'),
 	requestDate: DS.attr('number'),
 	approval: DS.attr('boolean'),
-	tema: DS.attr('string'),
-	comentarios: DS.attr('string')
+	subject: DS.attr('string'),
+	comments: DS.attr('string'),
+	teacher: DS.belongsTo('teacher')
 });

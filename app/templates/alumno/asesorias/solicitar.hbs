@@ -3,9 +3,11 @@
         Solicitar una asesoría
     </div>
     <div class="col s4 right-align" style="padding-right:30px;">
-        {{link-to 'cancelar' 'alumno.asesorias' class="waves-effect waves-light btn red darken-2 rounded-btn" }}
+        <button {{action 'cancelar'}}class="waves-effect waves-light btn red darken-2 rounded-btn">cancelar</button>
     </div>
 
 
 </div>
-{{forms/c-asesoria model=model}}
+{{forms/c-asesoria model=model.tutoringRequest
+					teachers=model.teachers
+					onGuardar=(action 'guardar' model.tutoringRequest)}}

@@ -31,7 +31,7 @@ export default Controller.extend({
         confirmButtonText: 'Submit',
         showLoaderOnConfirm: true,
         preConfirm: (pass) => {
-          console.log(pass.toString())
+          
 
           return this.get('firebaseApp').auth().signInWithEmailAndPassword(dueno.email, pass.toString()).then(() => {
 
@@ -67,13 +67,13 @@ export default Controller.extend({
 
 
           }).catch((e) => {
-            console.log(e)
+            
             cntx.set('wrongPass', true)
           })
         },
         allowOutsideClick: () => !swal.isLoading()
       }).then((result) => {
-        console.log(cntx.get('wrongPass'))
+        
         if (cntx.get('wrongPass')) {
           window.swal(
             'Contraseña incorrecta',

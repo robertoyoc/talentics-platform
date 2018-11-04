@@ -8,5 +8,7 @@
 
 
 </div>
-{{forms/c-duda model=model}}
+{{forms/c-duda model=model
+				onGuardar=(action 'guardar' model)
+				onBorrar=(action 'borrar' model)}}
 
