@@ -1,0 +1,24 @@
+<style class="text/css">
+  .roundedCard {
+    border-radius: 10px;
+    background-image: url('/media/list.png');
+    background-position: 250% 145%;
+    background-repeat: no-repeat;
+  }
+
+  .txtDifferent {
+    /* color: white;
+    mix-blend-mode: difference; */
+  }
+</style>
+
+<div class="card roundedCard {{colorBg}}">
+  <div class="card-content">
+    <span class="card-title white-text">
+      Beca Z
+    </span>
+  </div>
+    <div class="card-action">
+      {{#link-to 'admin.becas.detalle' class="white-text"}}Detalle{{/link-to}}
+    </div>
+</div>

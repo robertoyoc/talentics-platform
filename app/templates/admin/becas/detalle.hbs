@@ -1,1 +1,107 @@
-{{outlet}}
+<style type="text/css">
+  .topDistance {
+  	width:100%;
+  	position: absolute;
+    margin-top: 225px;
+    /* height: 95vh; */
+    /* overflow-y: scroll; */
+  }
+
+  .roundedCard {
+    border-radius: 10px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  .roundedButton {
+    border-radius: 10px;
+    text-align:center;
+  }
+
+  .filteredImage {
+    display: inline-block;
+    vertical-align: middle;
+    filter: brightness(0.1) invert(1);
+  }
+
+
+</style>
+
+<div class="row topDistance">
+  {{#link-to 'admin.index' class="col s1 offset-s1 roundedButton"}}
+    <br>
+    <img src="/media/admin-button.svg">
+  {{/link-to}}
+  <div class="col s9">
+
+    <div class="row">
+      <div class="col s4 offset-s4">
+        <div class="card-panel roundedCard blue accent-2">
+          <img class="responsive-img filteredImage" src="/media/birrete.png">
+        </div>
+      </div>
+
+      <div class="col s4 offset-s4">
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <label><b>Nombre:</b></label>
+          </div>
+          <div class="col s6">
+            <input type="text" class="validate" value="Beca de Excelencia" disabled=true>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <label><b>Institución:</b></label>
+          </div>
+          <div class="col s6">
+            <input type="text" class="validate" value="ITESM" disabled=true>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <label><b>Nivel Educativo:</b></label>
+          </div>
+          <div class="col s6">
+            <input type="text" class="validate" value="Preparatoria" disabled=true>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <label><b>Requisitos:</b></label>
+          </div>
+          <div class="col s6">
+            <input type="text" class="validate" value="STUFF" disabled=true>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <label><b>Beneficios:</b></label>
+          </div>
+          <div class="col s6">
+            <input type="text" class="validate" value="STUFF" disabled=true>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            {{#link-to 'admin.becas' type="submit" class="waves-effect waves-light btn right blue" style="width:150px;"}}
+             Aceptar
+            {{/link-to}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
