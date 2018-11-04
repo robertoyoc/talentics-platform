@@ -135,6 +135,20 @@ p-0{
 	color: #616161;
 }
 
+
 .selected{
 	background:yellow;
+}
+
+.card-tlc{
+	border-bottom: 1px solid #E0E0E0;
+}
+
+
+.course-card{
+	border: 0.25px solid #BDBDBD;
+box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.25);
+border-radius: 15px;
+height: 164px;
+margin: 0px 4%;
 }

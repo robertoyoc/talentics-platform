@@ -1,1 +1,55 @@
-{{outlet}}
+{{#ember-wormhole to="title"}}
+Cursos
+{{/ember-wormhole}}
+
+<div class="row">
+    <div class="divider-tlc col s6"></div>
+</div>
+<div class="row font-tlc " style="height:100px;">
+    {{#link-to 'alumno.cursos.mis-cursos' class="all-width no-link"}}
+    <div class="col s2 valign-wrapper" style="height:100px;"><img src="/alumno/miscursos.svg"></div>
+    <div class="col s4 valign-wrapper" style="height:100px; font-size: 36px;">Mis cursos</div>
+    {{/link-to}}
+</div>
+<div class="row">
+    <div class="divider-tlc col s6"></div>
+</div>
+
+<div class="row">
+    <div class="col s12 h2" style="margin-top:10px">
+        Busca nuevos cursos
+
+    </div>
+    <div class="col s12" style="margin-top:10px; ">
+        {{input id="search" placeholder="Buscar" class="col s8 input-tlc "}}<i class="material-icons col s2 valign-wrapper"
+            style="height:44px">search</i>
+
+    </div>
+
+</div>
+<ul class="collection" style="margin-top:20px">
+    <li class="collection-item">
+        <div class="row valign-wrapper">
+            <div class="col s2 center-align">
+                <img src="https://www.weact.org/wp-content/uploads/2016/10/Blank-profile.png" alt="" width="50px">
+            </div>
+            <div class="col s3">
+                <span>Title</span>
+            </div>
+            <div class="col s5">
+                Description
+
+            </div>
+            <div class="col s2">
+                <a class="link-tlc">
+                    agregar </a>
+            </div>
+        </div>
+
+
+
+
+    </li>
+
+
+</ul>

@@ -61,3 +61,34 @@
   }
 
 @import "ember-power-select";
+
+
+.font-tlc{
+	font-family: Poppins;
+	font-style: normal;
+	font-weight: normal;
+	line-height: normal;
+	color: #616161;
+
+}
+.link-tlc{
+	text-decoration-line: underline;
+	color: #EB5757;
+}
+.input-tlc{
+	background: #FFFFFF;
+border: 0.25px solid #BDBDBD!important;
+box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2)!important;
+padding: 0px 5px !important;
+}
+.rounded-btn{
+	border-radius: 12px;
+}
+
+.login-bg{
+  width: 100vw;
+  height: 100vh;
+}
+.no-link{
+  color: #616161;
+}
