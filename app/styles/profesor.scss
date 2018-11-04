@@ -2,7 +2,7 @@ div .nav-bar-index{
 
 	background: linear-gradient(263.26deg, rgba(242, 201, 76, 0.7) -6.23%, rgba(255, 255, 255, 0) 100%), #2D9CDB;
 	height: 40px;
-	box-shadow: none;
+	box-shadow: none !important;
 }	
 
 div .global-header{
@@ -35,7 +35,7 @@ div .header-text > p {
 
 .title-container{
 	position: absolute;
-	top: 40px;
+	top:40px;
 	height: 100px;
 	background: linear-gradient(263.26deg, rgba(242, 201, 76, 0.7) -6.23%, rgba(255, 255, 255, 0) 100%), #2D9CDB;
 }

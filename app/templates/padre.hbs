@@ -1,6 +1,6 @@
 <div class="padre">
   <div class="navbar-fixed">
-    <nav class="nav-bar-index">
+	<nav class="nav-bar-index">
     
     </nav>	
    </div>
@@ -9,7 +9,7 @@
 
    	</nav>
    </div>
-   <div class="navbar-fixed">
+   <div class="navbar-fixed" id="container-talentics">
    	<nav class="header-text">
    		<p>TALENTICS</p>
    	</nav>
@@ -18,20 +18,27 @@
    	<div class="nav-wrapper">
    		<div class="row">
    			<div class="col s5 offset-s1 m2 offset-m1"> 
-   				<img class="circle profile" src="https://orig00.deviantart.net/7566/f/2016/052/0/f/baymax_by_thefluffypandagirl-d9sk8v2.jpg">
+   				<img class="circle profile" src="{{rootURL}}/padre/bats.jpg">
    			</div>
-   			<div class="col s6 m6 title" id="title">
+   			<div class="col s6 m6 title" id="title" style="font-weight: 600; font-size:100px;">
 
    			</div>
    		</div>
    	</div>
    </nav>
 
-	<div class="main-cointainer" >
-		{{outlet}}
+	<div class="row" class="barra_lateral">
+		<div class="col s3 m2 l1">
+			<img src="{{rootURL}}/padre/menu.svg" class="icono_menu">
+		</div>
 	</div>
+	
+
+
+  {{outlet}}
 </div>
 
 
+</div>
 
 
