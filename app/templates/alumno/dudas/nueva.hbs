@@ -3,10 +3,12 @@
         Nueva
     </div>
     <div class="col s4 right-align">
-        {{link-to 'cancelar' 'alumno.dudas' class="waves-effect waves-light btn red darken-2 rounded-btn" }}
+    	<button {{action 'cancelar'}} class="waves-effect waves-light btn red darken-2 rounded-btn">cancelar</button>
+
     </div>
 
 
 </div>
-{{forms/c-duda model=model}}
+{{forms/c-duda model=model
+				onGuardar=(action 'guardar')}}
 

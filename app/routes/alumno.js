@@ -4,6 +4,7 @@ import { inject as service } from '@ember/service'
 export default Route.extend({
   currentUser: service(),
   beforeModel(transition) {
+
     this.set('transition', transition)
 
     return this.get('session').fetch().catch(() => {
@@ -13,7 +14,9 @@ export default Route.extend({
       }
     }).then(this.lookForTransition.bind(this)).catch(this.lookForTransition.bind(this));
   },
-
+  model(){
+    return this.get('account.info')
+  },
   lookForTransition() {
     return this.get('currentUser.account').then((account) => {
       this.set('account', account);
