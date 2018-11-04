@@ -1,0 +1,18 @@
+<style class="text/css">
+  .roundedCard {
+    border-radius: 10px;
+    background-image: url('/media/lapicero.png');
+    background-position: 50% 12%;
+  }
+</style>
+
+<div class="card roundedCard {{colorBg}}">
+  <div class="card-content white-text">
+    <span class="card-title white-text">
+      Clase Y
+    </span>
+  </div>
+    <div class="card-action">
+      {{#link-to 'admin.cursos.clases.detalle' class="white-text"}}Detalle{{/link-to}}
+    </div>
+</div>

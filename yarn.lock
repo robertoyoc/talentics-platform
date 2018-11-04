@@ -2635,6 +2635,12 @@ ember-load-initializers@^1.0.0:
   dependencies:
     ember-cli-babel "^6.6.0"
 
+ember-material-design-icons-shim@^0.1.12:
+  version "0.1.12"
+  resolved "https://registry.yarnpkg.com/ember-material-design-icons-shim/-/ember-material-design-icons-shim-0.1.12.tgz#a75323423c5c1d27895d1b93b5e34b031eba4688"
+  dependencies:
+    ember-cli-babel "^6.6.0"
+
 ember-maybe-import-regenerator@^0.1.6:
   version "0.1.6"
   resolved "https://registry.yarnpkg.com/ember-maybe-import-regenerator/-/ember-maybe-import-regenerator-0.1.6.tgz#35d41828afa6d6a59bc0da3ce47f34c573d776ca"
