@@ -9,5 +9,5 @@ export default DS.Model.extend({
 	clases: DS.hasMany('class'),
 	kit: DS.belongsTo('kit'),
 	badges: DS.hasMany('badge'),
-	nombre: DS.attr('string')
+	name: DS.attr('string')
 });

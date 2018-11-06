@@ -1,23 +1,57 @@
-{{#link-to 'editor.cursos.nuevo' }}<button>Nuevo</button>{{/link-to}}
-<style>
-td{
-  text-align: center;
-  border-bottom: 1px solid black;
-}
+<style type="text/css">
+  .topDistance {
+  	width:100%;
+  	position: absolute;
+    margin-top: 225px;
+    /* height: 95vh; */
+    /* overflow-y: scroll; */
+  }
+
+  .roundedButton {
+  	border-radius: 10px;
+  	text-align:center;
+  }
+
+  .inButtonCenter {
+  	margin:auto;
+  }
 </style>
 
-<table style="width:100%">
-  <tr>
-    <th>Nombre</th>
-    <th>Acciones</th>
-  </tr>
-  {{#each model as |curso|}}
-  <br><tr>
-    <td> {{#link-to 'editor.cursos.clases' curso.id}} {{curso.nombre}} {{/link-to}} </td>
-    <td>{{#link-to 'editor.cursos.editar' curso.id}}<button>Editar</button>{{/link-to}}<button {{action "delete" curso}}>Borrar</button></td> 
-  </tr>
-  {{else}}
-  <h5>Aun no existen cursos</h5>
-  {{/each}}
-</table>
+<div class="row topDistance">
+  {{#link-to 'editor.index' class="col s1 offset-s1 roundedButton"}}
+    <br>
+    <img src="/media/admin-button.svg">
+  {{/link-to}}
 
+  <div class="col s8 offset-s1">
+    <div class="row">
+      <div class="col s2">
+        <blockquote>
+          <h4> Cursos </h4>
+        </blockquote>
+      </div>
+      {{#link-to 'editor.cursos.nuevo' class="col s4 offset-s6"}}
+        <div class="card-panel roundedButton indigo lighten-1">
+            <h4 class="white-text inButtonCenter">Nuevo</h4>
+        </div>
+      {{/link-to}}
+    </div>
+
+    <div class="row">
+      {{#each model as |curso|}}
+        {{#unless curso.isNew}}
+          <div class="col s4">
+            {{course-card
+              course=curso
+              linkTitle='editor.cursos.clases'
+              linkButton='editor.cursos.editar'
+              messageButton='Editar'
+              colorBg='deep-orange lighten-1'}}
+          </div>
+        {{/unless}}
+      {{else}}
+        <h5>No hay cursos registrados.</h5>
+      {{/each}}
+    </div>
+  </div>
+</div>
