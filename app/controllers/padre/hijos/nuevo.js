@@ -21,6 +21,10 @@ export default Controller.extend({
 	  		})
 	  	})
 	  	
-	  }
+	  },
+	  onCancelar(kid){
+	  	kid.destroyRecord()
+	  	this.transitionToRoute('padre.hijos.index')
 	}
+}
 });

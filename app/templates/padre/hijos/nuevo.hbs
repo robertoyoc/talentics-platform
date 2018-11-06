@@ -1,2 +1,3 @@
 {{link-to 'Mis hijos' 'padre.hijos.index' }}
-{{hijo-unit model=model guardado=(action 'onGuardado')}}
+{{hijo-unit model=model guardado=(action 'onGuardado' model)
+						cancelar=(action 'onCancelar' model)}}

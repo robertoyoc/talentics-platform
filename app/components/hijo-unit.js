@@ -6,6 +6,9 @@ export default Component.extend({
 	  guardar(){
 
 	  	this.guardado();
+	  },
+	  cancelar(){
+	  	this.cancelar();
 	  }
 	}
 });
