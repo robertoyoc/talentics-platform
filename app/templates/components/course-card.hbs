@@ -8,11 +8,11 @@
 
 <div class="card roundedCard {{colorBg}}">
   <div class="card-content white-text">
-    <span class="card-title white-text">
-      Curso X
-    </span>
+    {{#link-to linkTitle course.id class="card-title white-text"}}
+      {{course.name}}
+    {{/link-to}}
   </div>
     <div class="card-action">
-      {{#link-to 'admin.cursos.detalle' class="white-text"}}Detalle{{/link-to}}
+      {{link-to messageButton linkButton course.id class="white-text"}}
     </div>
 </div>

@@ -2,8 +2,13 @@ import Controller from '@ember/controller';
 
 export default Controller.extend({
 	actions: {
-	  onGuardado(){
-	  	this.transitionToRoute('editor.cursos.index')
+		onCancel() {
+			this.transitionToRoute('editor.cursos.index');
+		},
+	  onSave(model){
+	  	model.save().then(()=>{
+				this.send('onCancel');
+			})
 	  }
 	}
 });

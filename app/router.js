@@ -24,7 +24,6 @@ Router.map(function() {
       this.route('enviar');
     });
   });
-
   this.route('editor', function() {
     this.route('cursos', function() {
       this.route('nuevo');
@@ -39,6 +38,25 @@ Router.map(function() {
       this.route('editar', { path: '/editar/:scholarship_id' });
     });
   });
+  this.route('admin', function() {
+    this.route('cursos', function() {
+      this.route('detalle', { path: '/detalle/:course_id' });
+      this.route('clases', function() {
+        this.route('detalle');
+      });
+    });
+    this.route('becas', function() {
+      this.route('detalle');
+      this.route('aprobar');
+    });
+    this.route('usuarios', function() {
+      this.route('detalle');
+      this.route('suspender');
+      this.route('expediente');
+      this.route('balance');
+    });
+  });
+
   this.route('alumno', function() {
     this.route('dudas', function() {
       this.route('nueva');
@@ -63,24 +81,6 @@ Router.map(function() {
     });
     this.route('kits', function() {
       this.route('solicitar');
-    });
-  });
-  this.route('admin', function() {
-    this.route('cursos', function() {
-      this.route('detalle');
-      this.route('clases', function() {
-        this.route('detalle');
-      });
-    });
-    this.route('becas', function() {
-      this.route('detalle');
-      this.route('aprobar');
-    });
-    this.route('usuarios', function() {
-      this.route('detalle');
-      this.route('suspender');
-      this.route('expediente');
-      this.route('balance');
     });
   });
   this.route('profesor', function() {

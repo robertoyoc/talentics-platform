@@ -1,4 +1,4 @@
-{{#link-to  'editor.cursos.index'}}<button>Regresar a cursos</button>{{/link-to}}
+<!-- {{#link-to  'editor.cursos.index'}}<button>Regresar a cursos</button>{{/link-to}}
 <br>
 {{model.nombre}}
 <br>
@@ -21,4 +21,64 @@
 		{{else}}
 			<h2>No hay clases asignadas a este curso</h2>
 	{{/each}}
-</table>
+</table> -->
+
+<style type="text/css">
+  .topDistance {
+  	width:100%;
+  	position: absolute;
+    margin-top: 225px;
+    /* height: 95vh; */
+    /* overflow-y: scroll; */
+  }
+
+  .roundedButton {
+  	border-radius: 10px;
+  	text-align:center;
+  }
+
+  .inButtonCenter {
+  	margin:auto;
+  }
+</style>
+
+<div class="row topDistance">
+  {{#link-to 'admin.index' class="col s1 offset-s1 roundedButton"}}
+    <br>
+    <img src="/media/admin-button.svg">
+  {{/link-to}}
+
+  <div class="col s8 offset-s1">
+
+		<div class="row">
+      <div class="col s4">
+        <blockquote>
+          <h4>{{model.name}}: Clases </h4>
+        </blockquote>
+      </div>
+      {{#link-to 'editor.cursos.clases.nuevo' model.id class="col s4 offset-s4"}}
+        <div class="card-panel roundedButton indigo lighten-1">
+            <h4 class="white-text inButtonCenter">Nueva</h4>
+        </div>
+      {{/link-to}}
+    </div>
+
+		<div class="row">
+			{{#each model.clases as |clase|}}
+				{{#unless clase.isNew}}
+					<div class="col s4">
+						{{class-card
+							class=clase
+							linkTitle='editor.cursos.clases.editar'
+							linkButton='editor.cursos.clases.editar'
+							onDelete=(action 'onDelete' model clase)
+							messageButton='Editar'
+							colorBg='pink lighten-2'}}
+					</div>
+				{{/unless}}
+			{{else}}
+				<h5>No hay clases asignadas a este curso.</h5>
+			{{/each}}
+		</div>
+  </div>
+</div>

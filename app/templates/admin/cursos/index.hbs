@@ -34,24 +34,18 @@
     <br><br>
 
     <div class="row">
-      <div class="col s4">
-        {{admin-course-card colorBg='orange darken-1'}}
-      </div>
-      <div class="col s4">
-        {{admin-course-card colorBg='deep-purple lighten-1'}}
-      </div>
-      <div class="col s4">
-        {{admin-course-card colorBg='cyan lighten-1'}}
-      </div>
-      <div class="col s4">
-        {{admin-course-card colorBg='green darken-1'}}
-      </div>
-      <div class="col s4">
-        {{admin-course-card colorBg='deep-orange lighten-1'}}
-      </div>
-      <div class="col s4">
-        {{admin-course-card colorBg='amber lighten-1'}}
-      </div>
+      {{#each model as |curso|}}
+        <div class="col s4">
+          {{course-card
+            course=curso
+            linkTitle='admin.cursos.detalle'
+            linkButton='admin.cursos.detalle'
+            messageButton='Detalle'
+            colorBg='orange darken-1'}}
+        </div>
+      {{else}}
+        <h5>No hay cursos registrados.</h5>
+      {{/each}}
     </div>
   </div>
 </div>

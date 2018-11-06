@@ -1,3 +1,5 @@
-{{#link-to 'editor.cursos.index'}}<button>Tabla</button>{{/link-to}}
-<h1>Nuevo curso</h1>
-{{curso-unit model=model guardado=(action 'onGuardado')}}
+{{curso-unit
+  model=model
+  onSave=(action 'onSave' model)
+  onCancel=(action 'onCancel')
+}}
