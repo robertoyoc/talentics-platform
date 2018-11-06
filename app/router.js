@@ -153,7 +153,7 @@ Router.map(function() {
       this.route('detalle');
     });
   });
-  this.route('login');
+  this.route('login', {path: '/'});
   this.route('signin');
   this.route('dir');
 });
