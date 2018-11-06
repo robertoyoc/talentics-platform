@@ -1,1 +1,17 @@
-{{outlet}}
+<style type="text/css">
+.sep{
+  margin-top: 160px;
+  width: 100%;
+}
+</style>
+  <h3>Solicitudes</h3>
+<div class="sep center-align row center-align">
+    {{#each model as |solicitud|}}
+     <div class="col l3 s12">
+      <div>{{solicitud.kid.name}}</div><br>
+      <div>{{solicitud.subject}}</div>
+      <div class="center-align">{{solicitud.comments}}</div>
+     </div>
+    {{/each}}
+</div>
+
