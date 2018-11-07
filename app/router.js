@@ -48,12 +48,12 @@ Router.map(function() {
     this.route('becas', function() {
       this.route('detalle');
       this.route('aprobar');
-    });
-    this.route('usuarios', function() {
-      this.route('detalle');
-      this.route('suspender');
-      this.route('expediente');
-      this.route('balance');
+      this.route('usuarios', function() {
+        this.route('balance');
+        this.route('detalle');
+        this.route('expediente');
+        this.route('suspender');
+      });
     });
   });
 
@@ -156,6 +156,10 @@ Router.map(function() {
   this.route('login', {path: '/'});
   this.route('signin');
   this.route('dir');
+
+  this.route('becas', function() {
+    this.route('usuarios');
+  });
 });
 
 export default Router;

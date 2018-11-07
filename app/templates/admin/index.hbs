@@ -1,1 +1,88 @@
-{{outlet}}
+<style type="text/css">
+  .topDistance {
+  	width:100%;
+  	position: absolute;
+    margin-top: 225px;
+    /* height: 95vh; */
+    /* overflow-y: scroll; */
+  }
+
+  .roundedButton {
+  	border-radius: 10px;
+  	text-align:center;
+  }
+
+  .inButtonCenter {
+  	margin:auto;
+  }
+
+  .roundedCard {
+    border-radius: 20px;
+    background-image: url('/media/birrete.png');
+    background-position: 50% 12%;
+    height: 200px;
+    width: 100%;
+  }
+
+  .dash{
+  	margin-top: 10%;
+  	font-size: 150px !important;
+  }
+
+  .titulo{
+  	margin-left: 3%;
+  }
+
+  .redon{
+  	border-radius: 20px;
+  }
+</style>
+
+<div class="row topDistance">
+    <div class="row">
+    	<div class="col s12 l4"></div>
+    	<div class="col s12 l8">
+    		<div class="row">
+    			
+    			<div class="col s12 l4">
+    				{{#link-to 'admin.becas'}}
+    				<div class="card redon green white-text">
+    					<div class="row">
+    						<div class="col s1">
+    							<h2 class="titulo">Becas</h2>
+    						</div>
+    						<div class="col s11 center-align">
+    							<i class="material-icons dash white-text">school</i>
+    						</div>
+    					</div>
+    				</div>
+    				{{/link-to}}
+    				{{#link-to 'admin.cursos'}}
+    				<div class="card redon green white-text">
+    					<div class="row">
+    						<div class="col s1">
+    							<h2 class="titulo">Cursos</h2>
+    						</div>
+    						<div class="col s11 center-align">
+    							<i class="material-icons dash white-text">book</i>
+    						</div>
+    					</div>
+    				</div>
+    				{{/link-to}}
+    				{{#link-to 'admin.cursos'}}
+    				<div class="card redon green white-text">
+    					<div class="row">
+    						<div class="col s1">
+    							<h2 class="titulo">Badges</h2>
+    						</div>
+    						<div class="col s11 center-align">
+    							<i class="material-icons dash white-text">bookmark</i>
+    						</div>
+    					</div>
+    				</div>
+    				{{/link-to}}
+    			</div>
+    		</div>
+    	</div>
+    </div>
+</div>
