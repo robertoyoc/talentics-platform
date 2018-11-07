@@ -125,7 +125,7 @@ Router.map(function() {
     this.route('hijos', function() {
       this.route('nuevo');
       this.route('editar', { path: 'editar/:kid_id' });
-      this.route('detalle');
+      this.route('detalle', {path: 'detalle/:kid_id'});
     });
     this.route('balance', function() {
       this.route('detalle');

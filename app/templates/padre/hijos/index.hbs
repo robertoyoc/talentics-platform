@@ -9,13 +9,15 @@
   </tr>
 
   {{#each model.kids as |hijo|}}
-  <tr>
+
+  <tr {{action 'ver' hijo}}>
+
     <td>{{hijo.name}}</td>
     <td>{{hijo.lastName}}</td>
     <td>{{link-to 'Editar' 'padre.hijos.editar' hijo.id}}<button {{action "delete" hijo}} >Borrar</button></td> 
 
-    
   </tr>
-  {{/each}}
+
+{{/each}}
 </table>
 

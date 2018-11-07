@@ -1,1 +1,21 @@
 {{outlet}}
+<div>
+	<h1>{{model.name}} {{model.lastName}}</h1>
+	<h3>{{model.email}}</h3>
+	<h4>Asesorías</h4>
+	<table>
+		<tr>
+			<th>Fecha</th>
+			<th>Motivo</th>
+			<th>Maestro</th>
+		</tr>
+
+		{{#each model.tutoringRequest as |asesoria|}}
+			<tr>
+				<td>{{asesoria.requestDate}}</td>
+				<td>{{asesoria.subject}}</td>
+				<td>{{asesoria.teacher.name}} {{asesoria.teacher.lastName}}</td>
+			</tr>
+		{{/each}}
+	</table>
+</div>

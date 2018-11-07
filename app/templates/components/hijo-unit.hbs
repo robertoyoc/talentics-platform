@@ -1,8 +1,8 @@
-<br>
-Nombre
-{{input value=model.nombre}}<br>
+<form {{action "guardar" on="submit"}}> 
+	<p>Nombre: {{input type="text" value=model.name}}</p>
+	<p>Apellidos: {{input type="text" value=model.lastName}}</p>
+	<p>Correo: {{input type="email" value=model.email}}</p>
+	<button>Guardar</button>
+	<button type="button" {{action 'cancelar'}}>Cancelar</button>
+</form>
 
-Apellido
-{{input value=model.apellido}} <br>
-
-<button {{action "guardar" model}}>Guardar</button>
