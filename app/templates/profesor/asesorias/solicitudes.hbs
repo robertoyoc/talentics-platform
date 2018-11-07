@@ -1,17 +1,26 @@
 <style type="text/css">
 .sep{
-  margin-top: 160px;
+  position: absolute;
+  top: 160px;
   width: 100%;
 }
 </style>
+<div class="sep">
   <h3>Solicitudes</h3>
-<div class="sep center-align row center-align">
-    {{#each model as |solicitud|}}
-     <div class="col l3 s12">
-      <div>{{solicitud.kid.name}}</div><br>
-      <div>{{solicitud.subject}}</div>
-      <div class="center-align">{{solicitud.comments}}</div>
-     </div>
+  <div class="row">
+  	{{#each model as |solicitud|}}
+    <div class="col s12 m4">
+      <div class="card blue-grey darken-1 hoverable">
+        <div class="card-content white-text">
+          <span class="card-title">{{solicitud.kid.name}}</span>
+          <div>{{solicitud.subject}}</div>
+          <p>{{solicitud.comments}}</p>
+        </div>
+        <div class="card-action">
+          <a href="#">Contactar</a>
+        </div>
+      </div>
+    </div>
     {{/each}}
-</div>
-
+  </div>
+</div>  
