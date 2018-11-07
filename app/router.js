@@ -37,6 +37,11 @@ Router.map(function() {
       this.route('nuevo');
       this.route('editar', { path: '/editar/:scholarship_id' });
     });
+
+    this.route('badges', function() {
+      this.route('nuevo');
+      this.route('editar');
+    });
   });
   this.route('admin', function() {
     this.route('cursos', function() {
