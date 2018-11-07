@@ -1,4 +1,5 @@
-Nombre: {{input value=model.name}}
-<br> contenido: {{textarea value=model.content cols="80" rows="15"}}
-<br>
-<button {{action "save" model }}>Guardar</button>
+{{class-unit
+  model=model
+  onSave=(action 'onSave' model)
+  onCancel=(action 'onCancel')
+}}

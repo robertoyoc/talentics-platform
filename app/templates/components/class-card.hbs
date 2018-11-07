@@ -8,12 +8,12 @@
 
 <div class="card roundedCard {{colorBg}}">
   <div class="card-content white-text">
-    {{#link-to linkTitle class.id class="card-title white-text"}}
+    {{#link-to linkTitle dynamicSegments class="card-title white-text"}}
       {{class.name}}
     {{/link-to}}
   </div>
     <div class="card-action">
-      {{link-to messageButton linkButton class.id class="white-text"}}
+      {{link-to messageButton linkButton dynamicSegments class="white-text"}}
       {{#if onDelete}}
         <a {{action 'eliminar'}}class="waves-effect waves-light btn-small red">
           <i class="material-icons left">delete</i>

@@ -1,5 +1,97 @@
-{{class-unit
-  model=model
-  onSave=(action 'onSave' model)
-  onCancel=(action 'onCancel' model)
-}}
+<style type="text/css">
+  .topDistance {
+  	width:100%;
+  	position: absolute;
+    margin-top: 225px;
+    /* height: 95vh; */
+    /* overflow-y: scroll; */
+  }
+
+  .roundedCard {
+    border-radius: 10px;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  .roundedButton {
+    border-radius: 10px;
+    text-align:center;
+  }
+
+  .filteredImage {
+    display: inline-block;
+    vertical-align: middle;
+    filter: brightness(0.1) invert(1);
+  }
+</style>
+
+<div class="row topDistance">
+  {{#link-to 'admin.index' class="col s1 offset-s1 roundedButton"}}
+    <br>
+    <img src="/media/admin-button.svg">
+  {{/link-to}}
+  <div class="col s9">
+
+    <div class="row">
+      <div class="col s2 offset-s2">
+        <blockquote>
+          <h4>
+            Nueva Clase
+            <!-- {{if model.isNew 'Nueva' (if model.hasDirtyAttributes 'Editando' 'Detalle')}} Clase -->
+          </h4>
+        </blockquote>
+      </div>
+
+      <div class="col s2 offset-s1">
+        <div class="card-panel roundedCard blue accent-2">
+          <img class="responsive-img filteredImage" src="/media/microscope.png">
+        </div>
+      </div>
+
+      <div class="col s8 offset-s2">
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <label><b>Nombre:</b></label>
+          </div>
+          <div class="col s6">
+            {{input type="text" class="validate" value=name}}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <label><b>Contenido:</b></label>
+          </div>
+          <div class="col s6">
+            {{textarea type="text" class="validate" value=classContent}}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s6">
+            <i class="material-icons prefix">account_circle</i>
+            <label><b>Curso:</b></label>
+          </div>
+          <div class="col s6">
+            {{input type="text" class="validate" value=model.name disabled=true}}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-field col s12">
+            <button {{action 'onCancel'}} type="submit" class="waves-effect waves-light btn left red" style="width:150px;">
+             Cancelar
+           </button>
+            <button {{action 'onSave' model}} type="submit" class="waves-effect waves-light btn right blue" style="width:150px;">
+             Guardar
+           </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

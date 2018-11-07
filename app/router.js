@@ -30,7 +30,7 @@ Router.map(function() {
       this.route('editar', { path: '/editar/:course_id' });
       this.route('clases', { path: '/clases/:course_id' }, function() {
         this.route('nuevo', { path: '/nuevo/:course_id' });
-        this.route('editar', { path: '/editar/class_id' });
+        this.route('editar', { path: '/editar/:class_id' });
       });
     });
     this.route('becas', function() {

@@ -39,8 +39,7 @@
       <div class="col s2 offset-s2">
         <blockquote>
           <h4>
-            Nueva Clase
-            <!-- {{if model.isNew 'Nueva' (if model.hasDirtyAttributes 'Editando' 'Detalle')}} Clase -->
+            {{if model.isNew 'Nueva' (if model.hasDirtyAttributes 'Editando' 'Detalle')}} Clase
           </h4>
         </blockquote>
       </div>
@@ -58,7 +57,7 @@
             <label><b>Nombre:</b></label>
           </div>
           <div class="col s6">
-            {{input type="text" class="validate" value=name}}
+            {{input type="text" class="validate" value=model.name}}
           </div>
         </div>
 
@@ -68,7 +67,7 @@
             <label><b>Contenido:</b></label>
           </div>
           <div class="col s6">
-            {{textarea type="text" class="validate" value=classContent}}
+            {{textarea type="text" class="validate" value=model.content}}
           </div>
         </div>
 
