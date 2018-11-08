@@ -38,15 +38,11 @@ export default Controller.extend({
             let ref = cntx.get('firebaseApp').auth()
             let pswd = '123123'
             ref.createUserWithEmailAndPassword(admin.email, pswd).then((userData) => {
-              return cntx.get('session').open('firebase', {
-                provider: 'password',
-                'email': admin.email,
-                'password': pswd
-              }).then((usuario) => {
+
                 return admin.save().then((user) => {
                   return cntx.store.createRecord('account', {
                     //id: usuario.uid,
-                    uid: usuario.uid,
+                    uid: userData.uid,
                     infoID: user.id,
                     perfil: 'admin'
                   }).save().then(() => {
@@ -62,7 +58,7 @@ export default Controller.extend({
                     })
                   })
                 })
-              })
+
             })
 
 

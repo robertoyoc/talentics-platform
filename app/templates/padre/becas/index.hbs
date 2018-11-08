@@ -1,1 +1,20 @@
-{{outlet}}
+<div class="main-content" style="margin-top: 20px">
+	<table>
+		<tr>
+			<th>Universidad</th>
+			<th>Tipo</th>
+			<th>Porcentaje</th>
+			<th>Acciones</th>
+		</tr>
+		{{#each model as |scholarship|}}
+			<tr {{action 'detalle'  scholarship on="click"}}>
+				<td>{{scholarship.university}}</td>
+				<td>{{scholarship.type}}</td>
+				<td>{{scholarship.percentage}}%</td>
+				<td><button {{action 'detalle' scholarship}}>Ver detalle</button></td>
+			</tr>
+		{{else}}
+			<h3>No hay becas disponibles.</h3>
+		{{/each}}
+	</table>
+</div>

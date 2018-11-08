@@ -151,7 +151,7 @@ Router.map(function() {
       this.route('detalle');
     });
     this.route('becas', function() {
-      this.route('detalle');
+      this.route('detalle', {path: '/detalle/:beca_id'});
       this.route('iniciar');
     });
     this.route('kits', function() {

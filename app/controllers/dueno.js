@@ -9,9 +9,6 @@ export default Controller.extend({
 			this.get('session').close().then(()=>{
 				this.transitionToRoute('dir')
 			})
-		},
-		menu(){
-			this.transitionToRoute('padre.index')
 		}
 	}
 });

@@ -1,1 +1,16 @@
-{{outlet}}
+<div>
+	<table>
+		<tr>
+			<th>Nombre</th>
+			<th>Apellidos</th>
+			<th>Correo electrónico</th>
+		</tr>
+		{{#each model as |teacher|}}
+			<tr>
+				<td>{{teacher.name}}</td>
+				<td>{{teacher.lastName}}</td>
+				<td>{{teacher.email}}</td>
+			</tr>
+		{{/each}}
+	</table>
+</div>

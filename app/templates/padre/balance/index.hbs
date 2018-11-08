@@ -1,4 +1,3 @@
-{{outlet}}
 
 <br><br><br><br><br><br>
 
@@ -8,34 +7,36 @@
 	</div>
 	<div class="col s1 m1 l2" style="display: inline-block; margin-left:600px;">21 de junio de 2018</div>
 	<div class="col s3 m4 l5">
-		<p class="balance_saldos">Saldo a pagar</p> <p class="balance_saldos_numeros">$500</p>
+		<p class="balance_saldos">Saldo a pagar</p> <p class="balance_saldos_numeros">${{model.totalDebts}}</p>
 		<br>
 		<p class="balance_saldos">Saldo por vencer</p> <p class="balance_saldos_numeros">$0</p>
 		<br>
-		<p class="balance_saldos">Saldo total</p> <p class="balance_saldos_numeros">$500</p>
+		<p class="balance_saldos">Saldo total</p> <p class="balance_saldos_numeros">${{model.totalDebts}}</p>
 		<a class="botones">pagar</a>
 	</div>
 	<div class="col s6 m6 l6" class="index_tarjeta">
-		<p class="index_t_categoria" style="margin-left: 10px;">FECHA</p>
-		<p class="index_t_categoria">DESCRIPCIÓN</p>
-		<p class="index_t_categoria">CARGO</p>
-		<p class="index_t_categoria">ABONO</p>
-		<p class="index_t_categoria">SALDO</p>
-		<p style="margin-left:10px; margin-top:-20px; color:#616161;">______________________________________________________________________________________________________</p>
-		<p class="index_t_elemento" style="margin-left: 10px;">26/08/2018</p>
-		<p class="index_t_elemento">Asesoría Damian</p>
-		<p class="index_t_elemento">$500.00</p>
-		<p class="index_t_elemento">$0.00</p>
-		<p class="index_t_elemento">$500.00</p>
-		<a class="botones" >detalle</a>
-		<br>
-				<p class="index_t_elemento" style="margin-left: 10px;">26/08/2018</p>
-		<p class="index_t_elemento">Asesoría Damian</p>
-		<p class="index_t_elemento">$500.00</p>
-		<p class="index_t_elemento">$0.00</p>
-		<p class="index_t_elemento">$500.00</p>
-		<a class="botones" >detalle</a>
-		<div style="width:900px; height:10px; background-color:#27AE60;"></div>
+		<table>
+			<tr>
+				<th>FECHA</th>
+				<th>DESCRIPCIÓN</th>
+				<th>CARGO</th>
+				<th>ABONO</th>
+				<th>SALDO</th>
+			</tr>
+
+			{{#each model.payments as |payment|}}
+			<tr>
+				<td>{{payment.pDate}}</td>
+				<td>{{payment.description}}</td>
+				<td>${{payment.amount}}</td>
+				<td>${{payment.deposit}}</td>
+				<td>${{payment.balance}}</td>
+			</tr>
+			{{else}}
+				<h3>No se ha hecho ningún pago.</h3>
+			{{/each}}
+		</table>
+		
 	</div>
 
 </div>
