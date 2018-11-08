@@ -1,1 +1,15 @@
-{{outlet}}
+<div class="main-content" style="margin-top: 10px">
+	<h1>{{model.subject}}</h1>
+	<h2>{{model.kid.name}} {{model.kid.lastName}}</h2>
+	<h3>Fecha:{{model.requestDate}}</h3>
+	<h3>Profesor:{{model.teacher.name}} {{model.teacher.lastName}}</h3>
+	<p>Status: 
+		{{#if model.approval}}
+			Autorizado
+		{{else}}
+			Aún no se ha autorizado <button {{action 'autorizar' model}}>Autorizar</button>
+		{{/if}}	
+	</p>
+	<p>Comentarios:</p>
+	<p>{{model.comments}}</p>
+</div>

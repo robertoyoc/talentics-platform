@@ -141,7 +141,7 @@ Router.map(function() {
     this.route('asesorias', function() {
       this.route('nuevo');
       this.route('editar');
-      this.route('detalle');
+      this.route('detalle', {path: '/detalle/:asesoria_id'});
     });
     this.route('profesores', function() {
       this.route('detalle');

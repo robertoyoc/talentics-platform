@@ -1,1 +1,30 @@
-{{outlet}}
+<div class="main-content" style="margin-top: 20px">
+	<table>
+		<tr>
+			<th>Fecha</th>
+			<th>Tema</th>
+			<th>Hijo(a)</th>
+			<th>Profesor</th>
+			<th>Status</th>
+			<th>Acciones</th>
+		</tr>
+		{{#each model.tutoringRequests as |asesoria|}}
+			<tr>
+				<td>{{asesoria.requestDate}}</td>
+				<td>{{asesoria.subject}}</td>
+				<td>{{asesoria.kid.name}}</td>
+				<td>{{asesoria.teacher.name}} {{asesoria.teacher.lastName}}</td>
+				<td>{{if asesoria.approval 'Autorizado' 'No autorizado'}}</td>
+				<td>
+					
+					{{#unless asesoria.approval}}
+						<button {{action 'autorizar' asesoria}} >Autorizar</button>
+					{{/unless}}
+					<button {{action 'detalle' asesoria}} >Ver detalle</button>
+				</td>
+			</tr>
+		{{else}}
+		<h3>No hay asesorías registradas.</h3>
+		{{/each}}
+	</table>
+</div>

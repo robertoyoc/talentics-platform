@@ -13,6 +13,7 @@ export default Controller.extend({
         let nino = account.get('info')
 
         asesoria.set('kid', nino)
+        asesoria.set('requestDate', 123)
         asesoria.save().then((asesoriaSaved) => {
           nino.get('tutoringRequest').then((asesoriasNino) => {
             asesoriasNino.pushObject(asesoriaSaved)
@@ -21,12 +22,21 @@ export default Controller.extend({
                 teacher.get('tutorings').then((tutorings) => {
                   tutorings.pushObject(asesoriaSaved)
                   teacher.save().then(() => {
-                    alert("Tu asesoría ha sido agendada")
-                    this.transitionToRoute('alumno.asesorias')
+                    nino.get('father').then((father) => {
+                      father.get('tutoringRequests').then((asesorias) => {
+                        asesorias.pushObject(asesoriaSaved)
+                        father.save().then(() => {
+                          asesoriaSaved.set('father', father)
+                          asesoriaSaved.save().then(() => {
+                            alert("Tu asesoría ha sido agendada")
+                            this.transitionToRoute('alumno.asesorias')
+                          })
+                        })
+                      })
+                    })
                   })
                 })
               })
-
             })
           })
         })
